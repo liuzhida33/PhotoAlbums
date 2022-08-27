@@ -5,6 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "PhotoAlbums",
+    platforms: [
+        .iOS(.v11),
+        .tvOS(.v13),
+        .watchOS(.v6)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -20,7 +25,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PhotoAlbums",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources"),
         .testTarget(
             name: "PhotoAlbumsTests",
             dependencies: ["PhotoAlbums"]),
