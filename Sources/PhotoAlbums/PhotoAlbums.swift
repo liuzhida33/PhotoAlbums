@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum PhotoAlbums {
+public enum PhotoAlbums {
     case `default`
 
-    func album() -> PhotoAlbumHandler {
+    public func album() -> PhotoAlbumHandler {
         return PhotoAlbum()
     }
 }
